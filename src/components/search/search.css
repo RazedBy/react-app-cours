@@ -1,0 +1,32 @@
+.searchBar {
+    width: 400px;
+    padding: 10px;
+    border-radius: 4px 4px 0px 0px;
+    border: 1px solid #ccc;
+    color: black
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dim {
+    padding: 20px;
+    width: 300px;
+    max-width: 400px;
+}
+
+ul {
+    list-style: none;
+    color: black
+}
+.searchItem li {
+    background-color: white;
+    padding: 10px;
+    color: black;
+    width: 400px;
+    border: 1px solid grey;
+}

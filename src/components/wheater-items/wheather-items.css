@@ -1,0 +1,15 @@
+.wheather-item{
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.temp{
+    text-align: center;
+    font-style: italic;
+    margin: 10px;
+}
+.time{
+    text-align: center;
+    font-weight: bold;
+}
