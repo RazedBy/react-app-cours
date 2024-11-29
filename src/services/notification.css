@@ -1,0 +1,28 @@
+
+.Toastify__toast {
+    color: #ffffff;  /* Change cette couleur selon tes préférences */
+  }
+  
+  /* Personnalisation spécifique pour les notifications de type succès */
+  .Toastify__toast--success {
+    background-color: #063908; /* Vert pour les succès */
+    color: white; /* Texte blanc pour les succès */
+  }
+  
+  /* Personnalisation pour les notifications d'erreur */
+  .Toastify__toast--error {
+    background-color: #511410; /* Rouge pour les erreurs */
+    color: white; /* Texte blanc pour les erreurs */
+  }
+  
+  /* Personnalisation pour les notifications d'information */
+  .Toastify__toast--info {
+    background-color: #0e3c62; /* Bleu pour les informations */
+    color: white; /* Texte blanc pour les informations */
+  }
+  
+  /* Personnalisation pour les notifications d'avertissement */
+  .Toastify__toast--warn {
+    background-color: #573707; /* Orange pour les avertissements */
+    color: black; /* Texte noir pour les avertissements */
+  }

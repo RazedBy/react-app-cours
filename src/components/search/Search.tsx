@@ -18,7 +18,7 @@ const Search: React.FC<SearchProps> = ({ placeholder, data }) => {
   );
 
   return (
-    <div className="last container center">
+    <div className="last container card center">
       <div className="dim">
         <input
           type="text"

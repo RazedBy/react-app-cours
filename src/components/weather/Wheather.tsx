@@ -4,6 +4,7 @@ import WheatherItems from "../wheater-items/WheatherItems";
 
 
 const Wheather = () => {
+
     const wheather = [
         {
             city: 'Roubaix',
@@ -19,11 +20,11 @@ const Wheather = () => {
     ];
 
     return (
-        <div className="container">
+        <div className="card container">
             <h3 className="container-title">Aujourd'hui</h3>
             {wheather.map((item) => (
                 <>
-                    <p className="container-subtitle">{item.city}</p>
+                    <p className="container-subtitle" key={item.details[0].id}>{item.city}</p>
                     <div className="wheather-items">
                         {item.details.map((detailsItem) => (
                             <WheatherItems key={detailsItem.id} item={detailsItem} />

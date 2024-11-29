@@ -1,0 +1,10 @@
+.align-div-center{
+    margin: 0;
+    height: 70vh;
+    display: grid;
+    place-items: center;
+}
+
+.img-404{
+    height: 300px;
+}
