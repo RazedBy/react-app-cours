@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
+
 import './login.css'
 import { checkPassword } from "../../services/api-service";
 import NotificationService from "../../services/Notications";
 import { ToastContainer } from "react-toastify";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function Login() {
 
     const navigate = useNavigate()

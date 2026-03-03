@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { getUserInformation } from "../../services/api-service";
-import NotificationService from "../../services/Notications";
 import './profile.css'
 import { useNavigate } from "react-router-dom";
 export interface profileInterface {
@@ -23,7 +22,7 @@ export default function Profile() {
             setUser(data.user)
         }
         fetchData();
-    }, []);
+    }, [accessToken]);
 
     function logout(){
         localStorage.removeItem('accessToken');
