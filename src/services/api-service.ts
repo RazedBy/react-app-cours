@@ -1,20 +1,20 @@
+const API_URL = process.env.REACT_APP_API_URL;
+
 export const checkPassword = async (username: any, password: any) => {
     try {
-        // Utilisation de POST pour envoyer les données dans le corps de la requête
-        const response = await fetch('http://localhost:3001/verify-password', {
-            method: 'POST', // On utilise la méthode POST
+        const response = await fetch(`${API_URL}/verify-password`, {
+            method: 'POST', 
             headers: {
-                'Content-Type': 'application/json', // On envoie des données JSON
+                'Content-Type': 'application/json', 
             },
             body: JSON.stringify({
-                username: username,  // Ajout du username dans le corps de la requête
-                password: password   // Ajout du password dans le corps de la requête
+                username: username,
+                password: password   
             }),
         });
 
-        // Si la réponse est valide, on récupère les données
         const data = await response.json();
-        return data; // Retourne les données récupérées
+        return data; 
 
     } catch (error) {
         console.error('Erreur lors de la récupération des données:', error);
@@ -23,25 +23,23 @@ export const checkPassword = async (username: any, password: any) => {
 
 export const registerUser = async (username: any, email:any,password: any,firstName:any,lastName:any) => {
     try {
-        // Utilisation de POST pour envoyer les données dans le corps de la requête
-        const response = await fetch('http://localhost:3001/users', {
-            method: 'POST', // On utilise la méthode POST
+        const response = await fetch(`${API_URL}/users`, {
+            method: 'POST', 
             headers: {
-                'Content-Type': 'application/json', // On envoie des données JSON
+                'Content-Type': 'application/json', 
             },
             body: JSON.stringify({
                 username: username,
-                email: email,  // Ajout du username dans le corps de la requête
-                password: password,   // Ajout du password dans le corps de la requête
+                email: email, 
+                password: password, 
                 firstName: firstName,
                 lastName: lastName
 
             }),
         });
 
-        // Si la réponse est valide, on récupère les données
         const data = await response.json();
-        return data; // Retourne les données récupérées
+        return data; 
 
     } catch (error) {
         console.error('Erreur lors de la récupération des données:', error);
@@ -50,7 +48,7 @@ export const registerUser = async (username: any, email:any,password: any,firstN
 
 export const getUserInformation = async (accessToken: any) => {
     try {
-        const response = await fetch('http://localhost:3001/getUserInformations',{
+        const response = await fetch(`${API_URL}/getUserInformations`,{
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
