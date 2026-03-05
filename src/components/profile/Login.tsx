@@ -35,12 +35,12 @@ export default function Login() {
             <h1 className="text-center">Login</h1>
             <form onSubmit={login} className="form">
                 <div className="form-group">
-                    <label htmlFor="username">Username <span style={{color:'red'}}>*</span></label>
-                    <input type="text" name="username" className="form-input" required />
+                    <label htmlFor="username" >Username <span style={{color:'red'}}>*</span></label>
+                    <input type="text" name="username" id="username" className="form-input" required />
                 </div>
                 <div className="form-group">
                     <label htmlFor="password">Password <span style={{color:'red'}}>*</span></label>
-                    <input type="password" name="password" className="form-input" required />
+                    <input type="password" name="password" id="password" className="form-input" required />
                 </div>
                 <button type="submit" className="form-submit">Login</button>
             </form>
