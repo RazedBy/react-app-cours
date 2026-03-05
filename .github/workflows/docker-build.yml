@@ -20,7 +20,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.PAT_GITHUB_PACKAGE_PUBLICATION }}
       - name: Run test 
-        run: npm test
+        run : |
+         npm install
+         npm test
       - name: Build and push Docker image
         run: |
           docker build -t ghcr.io/$(echo "$GITHUB_REPOSITORY" | tr '[:upper:]' '[:lower:]'):latest .
